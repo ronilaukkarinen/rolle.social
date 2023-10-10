@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rolle - My socials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="rolle - Roni Laukkarinen">
+  <meta name="description" content="I'm many things, but most of all, I'm human. In the following social medias I'm actually active.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cstyle type='text/css'%3E@media (prefers-color-scheme:dark)%7B.fill-dynamic-favicon%7Bstroke:%23fff;%7D%7D%3C/style%3E%3Ccircle class='fill-dynamic-favicon' cx='12' cy='12' r='4'%3E%3C/circle%3E%3Cpath class='fill-dynamic-favicon' d='M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94'%3E%3C/path%3E%3C/svg%3E">
+
+  <!-- Og:image -->
+  <meta property="og:image" content="og-image.png">
+
+  <!-- Inter font -->
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+    :root {
+      --color-bg: #1a1a1e;
+      --color-fg: #fff;
+    }
+
+    html,
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-fg);
+      line-height: 1.5;
+      font-size: 16px;
+
+      /* Inter first, then web safe */
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .profile {
+      display: inline-block;
+      height: 170px;
+      line-height: 170px;
+      position: relative;
+      text-align: center;
+      width: 170px;
+    }
+
+    .profile-border {
+      animation: rotate 5.5s 1 linear;
+      border-radius: 100%;
+      height: 100%;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .profile-border-segment {
+      left: -10px;
+      position: absolute;
+      top: -10px;
+    }
+
+    .profile-border-segmentcontainer {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform-origin: 50% 50%;
+      width: 100%;
+    }
+
+    .profile-bordermask {
+      bottom: -10px;
+      left: -10px;
+      position: absolute;
+      right: -10px;
+      top: -10px;
+    }
+
+    .profile-border-segmentcontainer:nth-child(1) {
+      transform: rotate(12deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(1) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .013333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(2) {
+      transform: rotate(24deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(2) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .026666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(3) {
+      transform: rotate(36deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(3) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .04s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(4) {
+      transform: rotate(48deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(4) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .053333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(5) {
+      transform: rotate(60deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(5) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .066666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(6) {
+      transform: rotate(72deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(6) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .08s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(7) {
+      transform: rotate(84deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(7) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .093333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(8) {
+      transform: rotate(96deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(8) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .106666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(9) {
+      transform: rotate(108deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(9) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .12s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(10) {
+      transform: rotate(120deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(10) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .133333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(11) {
+      transform: rotate(132deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(11) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .146666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(12) {
+      transform: rotate(144deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(12) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .16s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(13) {
+      transform: rotate(156deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(13) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .173333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(14) {
+      transform: rotate(168deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(14) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .186666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(15) {
+      transform: rotate(180deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(15) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .2s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(16) {
+      transform: rotate(192deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(16) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .213333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(17) {
+      transform: rotate(204deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(17) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .226666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(18) {
+      transform: rotate(216deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(18) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .24s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(19) {
+      transform: rotate(228deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(19) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .253333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(20) {
+      transform: rotate(240deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(20) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .266666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(21) {
+      transform: rotate(252deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(21) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .28s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(22) {
+      transform: rotate(264deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(22) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .293333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(23) {
+      transform: rotate(276deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(23) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .306666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(24) {
+      transform: rotate(288deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(24) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .32s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(25) {
+      transform: rotate(300deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(25) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .333333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(26) {
+      transform: rotate(312deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(26) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .346666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(27) {
+      transform: rotate(324deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(27) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .36s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(28) {
+      transform: rotate(336deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(28) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .373333333333333s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(29) {
+      transform: rotate(348deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(29) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .386666666666667s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-border-segmentcontainer:nth-child(30) {
+      transform: rotate(360deg);
+    }
+
+    .profile-border-segmentcontainer:nth-child(30) .profile-border-segment {
+      animation: scale 2.5s 1 linear;
+      animation-delay: .4s;
+      transform-origin: 180px 50%;
+    }
+
+    .profile-imagemask {
+      background: #000;
+      border-radius: 100%;
+      display: inline-block;
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+      width: 150px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1, 1);
+      }
+      18% {
+        transform: scale(.01, .01);
+      }
+      33% {
+        transform: scale(.01, .01);
+      }
+      51% {
+        transform: scale(1, 1);
+      }
+    }
+
+    html {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      margin: 0 auto;
+      max-width: 400px;
+      width: 100%;
+      overflow: visible;
+    }
+
+    .profile {
+      transition: all 200ms ease-in-out;
+      transform: scale(.5);
+      transform-origin: 0 4px;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: minmax(0, 90px) minmax(0, 2fr);
+      gap: 24px;
+    }
+
+    .prefix {
+      margin: 0;
+      opacity: .6;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 6px 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      margin-top: 16px;
+      display: flex;
+      gap: 12px;
+    }
+
+    a {
+      color: var(--color-fg);
+    }
+
+    li svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: calc(100vw - 60px);
+        margin-top: -82px;
+      }
+
+      .profile {
+        transform-origin: 0;
+        margin-bottom: -16px;
+      }
+
+      .header {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .card {
+        zoom: 1.1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <section class="header">
+      <div class="profile">
+        <div class="profile-border">
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(255,165,70,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(251,156,74,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(247,148,79,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(243,139,83,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(239,130,87,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(235,121,91,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(231,113,96,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(227,104,100,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(224,95,104,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(220,86,108,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(216,78,113,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(212,69,117,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(208,60,121,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(204,51,125,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(200,43,130,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(196,34,134,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(200,43,130,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(204,51,125,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(208,60,121,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(212,69,117,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(216,78,113,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(220,86,108,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(224,95,104,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(227,104,100,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(231,113,96,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(235,121,91,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(239,130,87,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(243,139,83,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(247,148,79,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-border-segmentcontainer">
+            <svg class="profile-border-segment" width="190" height="190">
+              <circle cx="95" cy="95" r="85" fill="transparent" stroke="rgba(251,156,74,1)" stroke-dasharray="18, 5000" stroke-width="8" stroke-linecap="round" transform="rotate(-5,95,95)"></circle>
+            </svg>
+          </div>
+          <div class="profile-bordermask">
+            <svg class="profile-bordermask-gfx" width="190" height="190">
+              <circle cx="95" cy="95" r="89.2" fill="transparent" stroke="#1a1a1e" stroke-width="5"></circle>
+              <circle cx="95" cy="95" r="80.4" fill="transparent" stroke="#1a1a1e" stroke-width="5"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="profile-imagemask">
+          <a href="https://instagram.com/rolle_" aria-label="Visit my Instagram">
+            <img alt="Gravatar" id="img" src="" width="150" height="150">
+          </a>
+        </div>
+      </div>
+
+      <div class="bio">
+        <p class="prefix" aria-describedby="title">rolle</p>
+        <h1 id="title">Roni Laukkarinen</h1>
+        <p>I'm many things, but most of all, I'm human. In the following social medias I'm actually active.</p>
+
+        <ul>
+          <li>
+            <a href="https://mementomori.social/@rolle" rel="me" aria-label="Mastodon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/rolle" aria-label="X">
+              <svg class="x" width="24" height="24" viewBox="0 0 300 300.251" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59H300M36.01 19.54h40.65l187.13 262.13h-40.66"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/rolle.wtf" aria-label="Bluesky">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/rolle_" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.strava.com/athletes/16582440" aria-label="Strava">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24" fill="currentColor" viewBox="0 0 512 512"><path d="M226.8 31l-133 256.6h78.4l54.7-102 54.2 102h77.8L226.8 31zm132 256.6l-38.6 77.5-39.2-77.5h-59.4L320.2 481l98-193.4h-59.4z"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rolaukka" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ronilaukkarinen" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Fetch Gravatar
+    function get_gravatar(email, size) {
+
+      // MD5 (Message-Digest Algorithm) by WebToolkit
+      var md5=function(s){function L(k,d){return(k<<d)|(k>>>(32-d))}function K(G,k){var I,d,F,H,x;F=(G&2147483648);H=(k&2147483648);I=(G&1073741824);d=(k&1073741824);x=(G&1073741823)+(k&1073741823);if(I&d){return(x^2147483648^F^H)}if(I|d){if(x&1073741824){return(x^3221225472^F^H)}else{return(x^1073741824^F^H)}}else{return(x^F^H)}}function r(d,F,k){return(d&F)|((~d)&k)}function q(d,F,k){return(d&k)|(F&(~k))}function p(d,F,k){return(d^F^k)}function n(d,F,k){return(F^(d|(~k)))}function u(G,F,aa,Z,k,H,I){G=K(G,K(K(r(F,aa,Z),k),I));return K(L(G,H),F)}function f(G,F,aa,Z,k,H,I){G=K(G,K(K(q(F,aa,Z),k),I));return K(L(G,H),F)}function D(G,F,aa,Z,k,H,I){G=K(G,K(K(p(F,aa,Z),k),I));return K(L(G,H),F)}function t(G,F,aa,Z,k,H,I){G=K(G,K(K(n(F,aa,Z),k),I));return K(L(G,H),F)}function e(G){var Z;var F=G.length;var x=F+8;var k=(x-(x%64))/64;var I=(k+1)*16;var aa=Array(I-1);var d=0;var H=0;while(H<F){Z=(H-(H%4))/4;d=(H%4)*8;aa[Z]=(aa[Z]|(G.charCodeAt(H)<<d));H++}Z=(H-(H%4))/4;d=(H%4)*8;aa[Z]=aa[Z]|(128<<d);aa[I-2]=F<<3;aa[I-1]=F>>>29;return aa}function B(x){var k="",F="",G,d;for(d=0;d<=3;d++){G=(x>>>(d*8))&255;F="0"+G.toString(16);k=k+F.substr(F.length-2,2)}return k}function J(k){k=k.replace(/rn/g,"n");var d="";for(var F=0;F<k.length;F++){var x=k.charCodeAt(F);if(x<128){d+=String.fromCharCode(x)}else{if((x>127)&&(x<2048)){d+=String.fromCharCode((x>>6)|192);d+=String.fromCharCode((x&63)|128)}else{d+=String.fromCharCode((x>>12)|224);d+=String.fromCharCode(((x>>6)&63)|128);d+=String.fromCharCode((x&63)|128)}}}return d}var C=Array();var P,h,E,v,g,Y,X,W,V;var S=7,Q=12,N=17,M=22;var A=5,z=9,y=14,w=20;var o=4,m=11,l=16,j=23;var U=6,T=10,R=15,O=21;s=J(s);C=e(s);Y=1732584193;X=4023233417;W=2562383102;V=271733878;for(P=0;P<C.length;P+=16){h=Y;E=X;v=W;g=V;Y=u(Y,X,W,V,C[P+0],S,3614090360);V=u(V,Y,X,W,C[P+1],Q,3905402710);W=u(W,V,Y,X,C[P+2],N,606105819);X=u(X,W,V,Y,C[P+3],M,3250441966);Y=u(Y,X,W,V,C[P+4],S,4118548399);V=u(V,Y,X,W,C[P+5],Q,1200080426);W=u(W,V,Y,X,C[P+6],N,2821735955);X=u(X,W,V,Y,C[P+7],M,4249261313);Y=u(Y,X,W,V,C[P+8],S,1770035416);V=u(V,Y,X,W,C[P+9],Q,2336552879);W=u(W,V,Y,X,C[P+10],N,4294925233);X=u(X,W,V,Y,C[P+11],M,2304563134);Y=u(Y,X,W,V,C[P+12],S,1804603682);V=u(V,Y,X,W,C[P+13],Q,4254626195);W=u(W,V,Y,X,C[P+14],N,2792965006);X=u(X,W,V,Y,C[P+15],M,1236535329);Y=f(Y,X,W,V,C[P+1],A,4129170786);V=f(V,Y,X,W,C[P+6],z,3225465664);W=f(W,V,Y,X,C[P+11],y,643717713);X=f(X,W,V,Y,C[P+0],w,3921069994);Y=f(Y,X,W,V,C[P+5],A,3593408605);V=f(V,Y,X,W,C[P+10],z,38016083);W=f(W,V,Y,X,C[P+15],y,3634488961);X=f(X,W,V,Y,C[P+4],w,3889429448);Y=f(Y,X,W,V,C[P+9],A,568446438);V=f(V,Y,X,W,C[P+14],z,3275163606);W=f(W,V,Y,X,C[P+3],y,4107603335);X=f(X,W,V,Y,C[P+8],w,1163531501);Y=f(Y,X,W,V,C[P+13],A,2850285829);V=f(V,Y,X,W,C[P+2],z,4243563512);W=f(W,V,Y,X,C[P+7],y,1735328473);X=f(X,W,V,Y,C[P+12],w,2368359562);Y=D(Y,X,W,V,C[P+5],o,4294588738);V=D(V,Y,X,W,C[P+8],m,2272392833);W=D(W,V,Y,X,C[P+11],l,1839030562);X=D(X,W,V,Y,C[P+14],j,4259657740);Y=D(Y,X,W,V,C[P+1],o,2763975236);V=D(V,Y,X,W,C[P+4],m,1272893353);W=D(W,V,Y,X,C[P+7],l,4139469664);X=D(X,W,V,Y,C[P+10],j,3200236656);Y=D(Y,X,W,V,C[P+13],o,681279174);V=D(V,Y,X,W,C[P+0],m,3936430074);W=D(W,V,Y,X,C[P+3],l,3572445317);X=D(X,W,V,Y,C[P+6],j,76029189);Y=D(Y,X,W,V,C[P+9],o,3654602809);V=D(V,Y,X,W,C[P+12],m,3873151461);W=D(W,V,Y,X,C[P+15],l,530742520);X=D(X,W,V,Y,C[P+2],j,3299628645);Y=t(Y,X,W,V,C[P+0],U,4096336452);V=t(V,Y,X,W,C[P+7],T,1126891415);W=t(W,V,Y,X,C[P+14],R,2878612391);X=t(X,W,V,Y,C[P+5],O,4237533241);Y=t(Y,X,W,V,C[P+12],U,1700485571);V=t(V,Y,X,W,C[P+3],T,2399980690);W=t(W,V,Y,X,C[P+10],R,4293915773);X=t(X,W,V,Y,C[P+1],O,2240044497);Y=t(Y,X,W,V,C[P+8],U,1873313359);V=t(V,Y,X,W,C[P+15],T,4264355552);W=t(W,V,Y,X,C[P+6],R,2734768916);X=t(X,W,V,Y,C[P+13],O,1309151649);Y=t(Y,X,W,V,C[P+4],U,4149444226);V=t(V,Y,X,W,C[P+11],T,3174756917);W=t(W,V,Y,X,C[P+2],R,718787259);X=t(X,W,V,Y,C[P+9],O,3951481745);Y=K(Y,h);X=K(X,E);W=K(W,v);V=K(V,g)}var i=B(Y)+B(X)+B(W)+B(V);return i.toLowerCase()};
+      var size = size || 80;
+
+      return 'https://www.gravatar.com/avatar/' + md5(email) + '.jpg?s=' + size;
+    }
+
+    // Dom ready
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Gravatar
+      const gravatar = get_gravatar('roni@dude.fi', 300);
+
+      // Add to img
+      const img = document.getElementById('img');
+
+      // Add to src attribute
+      img.setAttribute('src', gravatar);
+    });
+  </script>
+
+</body>
+</html>
