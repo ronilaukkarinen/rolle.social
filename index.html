@@ -486,10 +486,21 @@
       .profile {
         transform-origin: 0;
         margin-bottom: -16px;
+        transform: scale(.5) translateY(-72px);
       }
 
       .header {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .header {
         display: block;
+      }
+
+      .profile {
+        transform: scale(.55) translateY(2px);
       }
     }
 
