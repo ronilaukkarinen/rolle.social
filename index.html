@@ -385,6 +385,16 @@
       width: 150px;
     }
 
+    .profile-imagemask img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
     @keyframes rotate {
       0% {
         transform: rotate(0);
@@ -684,7 +694,7 @@
         </div>
         <div class="profile-imagemask">
           <a href="https://instagram.com/rolle_" aria-label="Visit my Instagram">
-            <img alt="Gravatar" id="img" src="https://rolle.social/placeholder.jpg" width="150" height="150">
+            <img alt="Gravatar" id="img" src="" width="150" height="150" loading="eager" decoding="async">
           </a>
         </div>
       </div>
@@ -754,14 +764,30 @@
     // Dom ready
     document.addEventListener('DOMContentLoaded', function() {
 
-      // Gravatar
-      const gravatar = get_gravatar('roni@dude.fi', 300);
+      // Get both image URLs
+      const gravatarTiny = get_gravatar('roni@dude.fi', 20);
+      const gravatarFull = get_gravatar('roni@dude.fi', 600);
 
       // Add to img
       const img = document.getElementById('img');
+      
+      // Set low quality immediately with blur
+      img.src = gravatarTiny;
+      img.style.filter = 'blur(20px) saturate(1.2)';
+      img.style.transform = 'scale(1.1)';
+      img.style.transition = 'filter 0.3s ease, transform 0.3s ease';
 
-      // Add to src attribute
-      img.setAttribute('src', gravatar);
+      // Load high quality
+      const highQuality = new Image();
+      highQuality.onload = function() {
+        // Swap to high quality and remove blur
+        requestAnimationFrame(() => {
+          img.src = gravatarFull;
+          img.style.filter = 'none';
+          img.style.transform = 'scale(1)';
+        });
+      };
+      highQuality.src = gravatarFull;
     });
   </script>
 
